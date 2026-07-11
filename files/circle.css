@@ -1,0 +1,68 @@
+/* ==========================================================
+   circle.css
+   Community Circle page: header, conduct box,
+   discussion prompts, post compose box, post feed,
+   reply cards, sidebar contributor stats.
+   Depends on: base.css
+   ========================================================== */
+
+#page-community{background:linear-gradient(160deg,#0A1020,#0F1830);}
+
+/* ----- HEADER ----- */
+.comm-header{background:linear-gradient(135deg,#0A1020,#1A2840);padding:32px 48px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.comm-header h1{font-family:'Playfair Display',serif;font-size:1.8rem;color:white;margin-bottom:6px;}
+.comm-header p{color:rgba(255,255,255,0.45);font-size:0.9rem;}
+
+/* ----- BODY LAYOUT ----- */
+.comm-body{display:flex;gap:24px;padding:28px 48px;max-width:1200px;}
+.comm-main{flex:1;}
+
+/* ----- CONDUCT BOX ----- */
+.conduct-box{background:rgba(200,150,62,0.06);border:1px solid rgba(200,150,62,0.2);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px;display:flex;gap:14px;align-items:flex-start;}
+.conduct-icon{font-size:1.5rem;flex-shrink:0;}
+.conduct-text h4{font-size:0.85rem;font-weight:700;color:var(--gold-light);margin-bottom:4px;}
+.conduct-text p{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5;}
+
+/* ----- DISCUSSION PROMPT CHIPS ----- */
+.prompt-cards{display:flex;gap:10px;margin-bottom:24px;overflow-x:auto;padding-bottom:4px;}
+.prompt-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;cursor:pointer;white-space:nowrap;transition:all 0.2s;flex-shrink:0;}
+.prompt-card:hover,.prompt-card.sel{background:rgba(200,150,62,0.12);border-color:rgba(200,150,62,0.3);}
+.prompt-card p{font-size:0.8rem;color:rgba(255,255,255,0.55);max-width:200px;white-space:normal;line-height:1.4;}
+.prompt-card.sel p{color:var(--gold-light);}
+
+/* ----- NEW POST BOX ----- */
+.new-post-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:18px;margin-bottom:20px;}
+.new-post-box h4{font-size:0.82rem;font-weight:700;color:white;margin-bottom:10px;}
+.post-textarea{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;font-family:'Outfit',sans-serif;font-size:0.85rem;color:white;outline:none;resize:vertical;min-height:80px;transition:border-color 0.2s;}
+.post-textarea::placeholder{color:rgba(255,255,255,0.25);}
+.post-textarea:focus{border-color:rgba(200,150,62,0.5);}
+.post-submit{margin-top:10px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;border-radius:10px;padding:10px 20px;font-family:'Baloo 2',cursive;font-size:0.9rem;font-weight:700;color:var(--earth-dark);cursor:pointer;transition:all 0.2s;}
+.post-submit:hover{transform:translateY(-2px);}
+
+/* ----- POST CARDS ----- */
+.post-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:18px;margin-bottom:14px;transition:border-color 0.2s;}
+.post-card:hover{border-color:rgba(200,150,62,0.2);}
+.post-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.post-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--earth),var(--gold));display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:white;flex-shrink:0;}
+.post-author{font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.75);}
+.post-time{font-size:0.72rem;color:rgba(255,255,255,0.3);}
+.post-topic{font-size:0.68rem;background:rgba(200,150,62,0.12);color:var(--gold-light);padding:2px 8px;border-radius:8px;margin-left:auto;}
+.post-card p{font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.65;}
+.post-actions{display:flex;gap:14px;margin-top:12px;}
+.post-action-btn{background:none;border:none;font-size:0.78rem;color:rgba(255,255,255,0.35);cursor:pointer;display:flex;align-items:center;gap:5px;transition:color 0.2s;}
+.post-action-btn:hover{color:var(--gold-light);}
+.post-action-btn.liked{color:var(--gold);font-weight:700;border-color:rgba(200,150,62,0.4);}
+
+/* ----- REPLY CARDS ----- */
+.reply-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px;margin-top:12px;}
+.reply-card .post-meta{margin-bottom:8px;}
+
+/* ----- SIDEBAR ----- */
+.comm-sidebar{width:280px;flex-shrink:0;}
+.comm-sb-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:18px;margin-bottom:16px;}
+.comm-sb-card h4{font-family:'Baloo 2',cursive;font-size:0.88rem;font-weight:700;color:rgba(255,255,255,0.8);margin-bottom:12px;}
+.top-contributor{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.top-contributor:last-child{border:none;}
+.tc-rank{font-size:0.7rem;font-weight:800;color:var(--gold);min-width:18px;}
+.tc-name{font-size:0.82rem;color:rgba(255,255,255,0.65);}
+.tc-posts{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-left:auto;}

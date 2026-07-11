@@ -1,0 +1,58 @@
+/* ==========================================================
+   dashboard.css
+   Home / Dashboard page: hero banner, nav cards,
+   stats boxes, sidebar (streak, continue, recently unlocked).
+   Depends on: base.css
+   ========================================================== */
+
+#page-dashboard{background:linear-gradient(160deg,#FAF4E8 0%,#F0E4C8 50%,#E8D4A8 100%);}
+
+/* ----- HERO BANNER ----- */
+.hero-banner{background:var(--earth-dark);position:relative;overflow:hidden;padding:48px;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(200,150,62,0.12) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(200,150,62,0.08) 0%,transparent 40%);pointer-events:none;}
+.hero-tag{display:inline-block;background:rgba(200,150,62,0.2);border:1px solid rgba(200,150,62,0.4);border-radius:20px;padding:4px 14px;margin-bottom:14px;font-size:0.72rem;font-weight:600;color:var(--gold-light);letter-spacing:1px;text-transform:uppercase;}
+.hero-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:white;line-height:1.25;margin-bottom:10px;}
+.hero-title span{color:var(--gold);}
+.hero-sub{color:rgba(255,255,255,0.55);font-size:0.9rem;margin-bottom:24px;max-width:500px;}
+.hero-bar-wrap{max-width:380px;background:rgba(255,255,255,0.1);border-radius:50px;height:10px;margin-bottom:8px;}
+.hero-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--gold),var(--gold-light));width:15%;transition:width 1.5s cubic-bezier(0.22,0.61,0.36,1);}
+.hero-bar-lbl{color:rgba(255,255,255,0.45);font-size:0.78rem;}
+
+/* ----- DASHBOARD GRID ----- */
+.dash-grid{display:grid;grid-template-columns:2fr 1fr;gap:24px;padding:32px 48px;max-width:1200px;}
+
+/* ----- NAV CARDS (feature shortcuts) ----- */
+.nav-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.nav-card{background:var(--card-bg);border-radius:var(--radius);padding:22px;cursor:pointer;position:relative;overflow:hidden;border:2px solid transparent;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:var(--shadow);}
+.nav-card:hover{transform:translateY(-4px) scale(1.02);box-shadow:var(--shadow-lg);border-color:var(--gold);}
+.nav-card-icon{font-size:2rem;margin-bottom:12px;display:block;}
+.nav-card h3{font-family:'Baloo 2',cursive;font-size:1rem;font-weight:700;margin-bottom:5px;color:var(--earth-dark);}
+.nav-card p{font-size:0.8rem;color:var(--text-light);line-height:1.4;}
+.nav-card-badge{position:absolute;top:12px;right:12px;background:var(--gold);color:white;border-radius:10px;padding:2px 9px;font-size:0.67rem;font-weight:700;}
+.nav-card-bar{position:absolute;bottom:0;left:0;right:0;height:4px;border-radius:0 0 16px 16px;}
+
+/* ----- STATS BOXES ----- */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px;}
+.stat-box{background:var(--gold-pale);border-radius:10px;padding:12px;text-align:center;}
+.stat-box .val{font-family:'Baloo 2',cursive;font-size:1.4rem;font-weight:800;color:var(--earth);line-height:1;}
+.stat-box .lbl{font-size:0.66rem;color:var(--text-light);margin-top:2px;}
+
+/* ----- SIDEBAR CARDS ----- */
+.sidebar-card{background:var(--card-bg);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:18px;}
+.sidebar-card h4{font-family:'Baloo 2',cursive;font-size:0.9rem;font-weight:700;color:var(--earth-dark);margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+
+/* ----- STREAK ROW ----- */
+.streak-row{display:flex;gap:5px;justify-content:space-between;}
+.streak-day{flex:1;text-align:center;padding:7px 3px;border-radius:8px;font-size:0.67rem;font-weight:600;}
+.streak-day.done{background:linear-gradient(135deg,#E67E22,var(--gold));color:white;}
+.streak-day.today{background:var(--gold-pale);color:var(--gold);border:2px solid var(--gold);}
+.streak-day.pending{background:rgba(0,0,0,0.05);color:var(--locked);}
+
+/* ----- CONTINUE LEARNING BUTTON ----- */
+.continue-btn{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--earth-dark),var(--earth));border:none;border-radius:var(--radius-sm);padding:13px 16px;cursor:pointer;width:100%;color:white;transition:all 0.2s;}
+.continue-btn:hover{transform:translateX(4px);}
+
+/* ----- RECENTLY UNLOCKED CHIP ----- */
+.tribe-chip{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;cursor:pointer;transition:all 0.2s;}
+.tribe-chip:hover{background:var(--gold-pale);}
+.tribe-chip-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}

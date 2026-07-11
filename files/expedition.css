@@ -1,0 +1,50 @@
+/* ==========================================================
+   expedition.css
+   Quest / Expedition page: path nodes, connectors,
+   island labels, sidebar progress cards.
+   Depends on: base.css
+   ========================================================== */
+
+#page-quest{background:linear-gradient(160deg,#FAF4E8,#EDE0C8);}
+
+/* ----- HEADER ----- */
+.quest-header{background:linear-gradient(135deg,var(--earth-dark),#5C2E0A);padding:32px 48px;color:white;}
+.quest-header h1{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;margin-bottom:6px;}
+.quest-header p{color:rgba(255,255,255,0.55);font-size:0.9rem;}
+
+/* ----- BODY LAYOUT ----- */
+.quest-body{display:flex;gap:32px;padding:32px 48px;max-width:1200px;}
+.quest-path{flex:1;}
+
+/* ----- ISLAND GROUP ----- */
+.island-group{margin-bottom:44px;}
+.island-label{font-family:'Baloo 2',cursive;font-size:1.2rem;font-weight:800;color:var(--earth);display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.island-label::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,var(--gold-pale),transparent);}
+
+/* ----- QUEST TRACK ----- */
+.quest-track{display:flex;flex-direction:column;align-items:flex-start;padding-left:18px;}
+.quest-node-wrap{display:flex;align-items:center;gap:18px;}
+.quest-connector{width:3px;height:32px;margin-left:25px;background:linear-gradient(180deg,var(--gold),var(--gold-pale));}
+.quest-connector.locked{background:var(--locked);opacity:0.3;}
+
+/* ----- NODES ----- */
+.quest-node{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;position:relative;border:3px solid transparent;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);flex-shrink:0;}
+.quest-node.done{background:linear-gradient(135deg,var(--gold),var(--gold-light));border-color:var(--gold);box-shadow:0 4px 16px rgba(200,150,62,0.4);}
+.quest-node.active{background:linear-gradient(135deg,var(--earth),var(--earth-dark));border-color:var(--gold);animation:pulse-node 2s infinite;}
+.quest-node.locked{background:rgba(176,160,144,0.2);border-color:var(--locked);cursor:not-allowed;filter:grayscale(1);}
+.quest-node.boss{background:linear-gradient(135deg,#8B0000,var(--danger));border-color:#FF6B6B;width:60px;height:60px;}
+@keyframes pulse-node{0%,100%{box-shadow:0 4px 20px rgba(107,63,26,0.5);}50%{box-shadow:0 4px 30px rgba(200,150,62,0.7);transform:scale(1.06);}}
+.quest-node:hover:not(.locked){transform:scale(1.1);}
+
+/* ----- NODE INFO ----- */
+.quest-node-info h4{font-size:0.92rem;font-weight:600;color:var(--earth-dark);margin-bottom:3px;}
+.quest-node-info small{font-size:0.76rem;color:var(--text-light);}
+.node-status{font-size:0.68rem;font-weight:700;padding:2px 9px;border-radius:10px;display:inline-block;margin-top:3px;}
+.node-status.done{background:rgba(39,174,96,0.15);color:var(--success);}
+.node-status.active{background:rgba(200,150,62,0.15);color:var(--gold);}
+.node-status.locked{background:rgba(0,0,0,0.06);color:var(--locked);}
+
+/* ----- SIDEBAR ----- */
+.quest-sidebar{width:280px;flex-shrink:0;}
+.qsb-card{background:var(--card-bg);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:18px;}
+.qsb-card h4{font-family:'Baloo 2',cursive;font-size:0.9rem;font-weight:700;color:var(--earth-dark);margin-bottom:12px;}

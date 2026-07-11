@@ -1,0 +1,41 @@
+{
+  "Katutubo Explorer Theme": {
+    "color": {
+      "gold": { "value": "#C8963E", "type": "color" },
+      "goldLight": { "value": "#E8B85C", "type": "color" },
+      "goldPale": { "value": "#F5E6C8", "type": "color" },
+      "earth": { "value": "#6B3F1A", "type": "color" },
+      "earthDark": { "value": "#3D1F08", "type": "color" },
+      "forest": { "value": "#2D5A27", "type": "color" },
+      "forestLight": { "value": "#4A8C42", "type": "color" },
+      "sky": { "value": "#1A3A5C", "type": "color" },
+      "skyLight": { "value": "#2A5A8C", "type": "color" },
+      "cream": { "value": "#FAF4E8", "type": "color" },
+      "warmWhite": { "value": "#FEFCF7", "type": "color" },
+      "textDark": { "value": "#1A0F00", "type": "color" },
+      "textMid": { "value": "#5C3D1A", "type": "color" },
+      "textLight": { "value": "#8C6A3D", "type": "color" },
+      "danger": { "value": "#C0392B", "type": "color" },
+      "success": { "value": "#27AE60", "type": "color" },
+      "locked": { "value": "#B0A090", "type": "color" },
+      "cardBg": { "value": "rgba(255,255,255,0.93)", "type": "color" }
+    },
+    "radius": {
+      "md": { "value": "16px", "type": "borderRadius" },
+      "sm": { "value": "10px", "type": "borderRadius" }
+    },
+    "size": {
+      "navHeight": { "value": "60px", "type": "sizing" }
+    },
+    "shadow": {
+      "md": {
+        "value": "0 8px 32px rgba(107,63,26,0.15)",
+        "type": "boxShadow"
+      },
+      "lg": {
+        "value": "0 20px 60px rgba(107,63,26,0.22)",
+        "type": "boxShadow"
+      }
+    }
+  }
+}

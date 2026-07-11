@@ -1,0 +1,80 @@
+/* ==========================================================
+   resources-help.css
+   Resources page: source cards, IPRA box, download items.
+   Help page: tutorial steps, accessibility cards,
+   FAQ accordion.
+   Depends on: base.css
+   ========================================================== */
+
+/* ==================== RESOURCES ==================== */
+
+#page-resources{background:linear-gradient(160deg,#FAF4E8,#F0E0C0);}
+
+.res-header{background:linear-gradient(135deg,var(--forest),var(--forest-light));padding:32px 48px;color:white;}
+.res-header h1{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;margin-bottom:6px;}
+.res-header p{color:rgba(255,255,255,0.6);font-size:0.9rem;}
+.res-body{padding:32px 48px;max-width:1100px;display:grid;grid-template-columns:1fr 340px;gap:24px;}
+.res-section-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--earth-dark);margin-bottom:16px;}
+
+/* ----- SOURCE CARDS ----- */
+.source-card{background:var(--card-bg);border-radius:var(--radius-sm);padding:16px 20px;box-shadow:var(--shadow);margin-bottom:12px;display:flex;gap:14px;align-items:flex-start;transition:all 0.2s;}
+.source-card:hover{transform:translateX(4px);border-left:3px solid var(--gold);}
+.source-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px;}
+.source-card h4{font-size:0.88rem;font-weight:700;color:var(--earth-dark);margin-bottom:4px;}
+.source-card p{font-size:0.78rem;color:var(--text-mid);line-height:1.5;}
+.source-card a{font-size:0.75rem;color:var(--sky-light);font-weight:600;text-decoration:none;}
+.source-card a:hover{text-decoration:underline;}
+
+/* ----- IPRA BOX ----- */
+.ipra-box{background:linear-gradient(135deg,var(--earth-dark),var(--earth));border-radius:var(--radius);padding:24px;color:white;margin-bottom:20px;}
+.ipra-box h3{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:12px;color:var(--gold-light);}
+.ipra-box p{font-size:0.82rem;color:rgba(255,255,255,0.65);line-height:1.65;margin-bottom:10px;}
+.ipra-rights{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;}
+.ipra-right{background:rgba(255,255,255,0.07);border-radius:8px;padding:10px 12px;font-size:0.78rem;color:rgba(255,255,255,0.75);display:flex;gap:8px;}
+.ipra-right::before{content:"✓";color:var(--gold-light);flex-shrink:0;}
+
+/* ----- DOWNLOADS ----- */
+.dl-section{background:var(--card-bg);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.dl-section h4{font-family:'Baloo 2',cursive;font-size:0.9rem;font-weight:700;color:var(--earth-dark);margin-bottom:14px;}
+.dl-item{display:flex;align-items:center;gap:12px;padding:11px;background:var(--gold-pale);border-radius:10px;margin-bottom:8px;cursor:pointer;transition:all 0.2s;}
+.dl-item:hover{background:var(--cream);box-shadow:var(--shadow);}
+.dl-icon{font-size:1.3rem;flex-shrink:0;}
+.dl-item h5{font-size:0.82rem;font-weight:700;color:var(--earth-dark);}
+.dl-item small{font-size:0.7rem;color:var(--text-light);}
+
+
+/* ==================== HELP ==================== */
+
+#page-help{background:linear-gradient(160deg,#FAF4E8,#F0E0C0);}
+
+.help-header{background:linear-gradient(135deg,#2C5364,#203A43);padding:32px 48px;color:white;}
+.help-header h1{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;margin-bottom:6px;}
+.help-header p{color:rgba(255,255,255,0.55);font-size:0.9rem;}
+.help-body{padding:32px 48px;max-width:1000px;}
+
+/* ----- TUTORIAL STEPS ----- */
+.tut-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px;}
+.tut-step{background:var(--card-bg);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);text-align:center;position:relative;}
+.tut-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:white;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.tut-step h4{font-family:'Baloo 2',cursive;font-size:0.95rem;font-weight:700;color:var(--earth-dark);margin-bottom:8px;}
+.tut-step p{font-size:0.8rem;color:var(--text-mid);line-height:1.5;}
+.tut-icon{font-size:2rem;display:block;margin-bottom:10px;}
+
+/* ----- ACCESSIBILITY CARDS ----- */
+.acc-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--earth-dark);margin-bottom:16px;}
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:30px;}
+.acc-card{background:var(--card-bg);border-radius:var(--radius-sm);padding:18px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;}
+.acc-icon{font-size:1.6rem;flex-shrink:0;}
+.acc-card h4{font-size:0.85rem;font-weight:700;color:var(--earth-dark);margin-bottom:5px;}
+.acc-card p{font-size:0.78rem;color:var(--text-mid);line-height:1.5;margin-bottom:8px;}
+
+/* ----- FAQ ACCORDION ----- */
+.faq-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--earth-dark);margin-bottom:16px;}
+.faq-item{background:var(--card-bg);border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden;box-shadow:var(--shadow);}
+.faq-q{width:100%;background:none;border:none;padding:16px 20px;text-align:left;font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:600;color:var(--earth-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background 0.2s;}
+.faq-q:hover{background:var(--gold-pale);}
+.faq-arrow{transition:transform 0.3s;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-a p{padding:0 20px 16px;font-size:0.82rem;color:var(--text-mid);line-height:1.6;}
